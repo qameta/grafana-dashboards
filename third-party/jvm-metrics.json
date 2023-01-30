@@ -3847,7 +3847,7 @@
         "name": "namespace",
         "options": [],
         "query": {
-          "query": "label_values(jvm_memory_used_bytes{cloud=\"$cloud\"}, namespace)",
+          "query": "label_values(kube_namespace_labels{cloud=\"$cloud\"}, namespace)",
           "refId": "StandardVariableQuery"
         },
         "refresh": 2,
