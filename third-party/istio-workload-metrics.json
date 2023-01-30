@@ -18,12 +18,6 @@
       "version": "9.3.1"
     },
     {
-      "type": "panel",
-      "id": "graph",
-      "name": "Graph (old)",
-      "version": ""
-    },
-    {
       "type": "datasource",
       "id": "prometheus",
       "name": "Prometheus",
@@ -64,7 +58,7 @@
       }
     ]
   },
-  "description": "Istio Workload Dashboard version 1.17.0-beta.0",
+  "description": "Istio Workload Dashboard version 1.17.0",
   "editable": true,
   "fiscalYearStartMonth": 0,
   "gnetId": 7630,
