@@ -18,6 +18,12 @@
       "version": "9.3.1"
     },
     {
+      "type": "panel",
+      "id": "graph",
+      "name": "Graph (old)",
+      "version": ""
+    },
+    {
       "type": "datasource",
       "id": "prometheus",
       "name": "Prometheus",
@@ -71,7 +77,7 @@
       "collapsed": false,
       "datasource": {
         "type": "prometheus",
-        "uid": "${DS_PROMETHEUS}"
+        "uid": "PBFA97CFB590B2093"
       },
       "gridPos": {
         "h": 1,
@@ -85,7 +91,7 @@
         {
           "datasource": {
             "type": "prometheus",
-            "uid": "${DS_PROMETHEUS}"
+            "uid": "PBFA97CFB590B2093"
           },
           "refId": "A"
         }
@@ -2610,7 +2616,7 @@
       "type": "row"
     }
   ],
-  "refresh": "1m",
+  "refresh": "5m",
   "schemaVersion": 37,
   "style": "dark",
   "tags": [],
@@ -2618,15 +2624,15 @@
     "list": [
       {
         "current": {
-          "selected": false,
-          "text": "default",
-          "value": "default"
+          "selected": true,
+          "text": "Prometheus",
+          "value": "Prometheus"
         },
         "hide": 0,
         "includeAll": false,
         "label": "datasource",
         "multi": false,
-        "name": "datasource",
+        "name": "DS_PROMETHEUS",
         "options": [],
         "query": "prometheus",
         "queryValue": "",
@@ -2637,6 +2643,10 @@
       },
       {
         "current": {},
+        "datasource": {
+          "type": "prometheus",
+          "uid": "${DS_PROMETHEUS}"
+        },
         "definition": "label_values(cluster)",
         "hide": 0,
         "includeAll": false,
@@ -2813,7 +2823,7 @@
     ]
   },
   "time": {
-    "from": "now-5m",
+    "from": "now-30m",
     "to": "now"
   },
   "timepicker": {
