@@ -102,7 +102,7 @@
       "collapsed": false,
       "datasource": {
         "type": "prometheus",
-        "uid": "PBFA97CFB590B2093"
+        "uid": "${DS_PROMETHEUS}"
       },
       "gridPos": {
         "h": 1,
@@ -116,7 +116,7 @@
         {
           "datasource": {
             "type": "prometheus",
-            "uid": "PBFA97CFB590B2093"
+            "uid": "${DS_PROMETHEUS}"
           },
           "refId": "A"
         }
@@ -165,7 +165,7 @@
         "Value": 75
       },
       "datasource": {
-        "uid": "$datasource"
+        "uid": "${DS_PROMETHEUS}"
       },
       "gridPos": {
         "h": 4,
@@ -186,7 +186,7 @@
       "targets": [
         {
           "datasource": {
-            "uid": "$datasource"
+            "uid": "${DS_PROMETHEUS}"
           },
           "expr": "sum(kube_pod_info{cluster=~\"$cluster\",node=~\"$node\"}) / sum(kube_node_status_allocatable{cluster=~\"$cluster\",resource=\"pods\",node=~\"$node\"})",
           "format": "time_series",
@@ -241,7 +241,7 @@
         "Value": 75
       },
       "datasource": {
-        "uid": "$datasource"
+        "uid": "${DS_PROMETHEUS}"
       },
       "gridPos": {
         "h": 4,
@@ -262,7 +262,7 @@
       "targets": [
         {
           "datasource": {
-            "uid": "$datasource"
+            "uid": "${DS_PROMETHEUS}"
           },
           "expr": "sum(kube_pod_container_resource_requests{cluster=~\"$cluster\",resource=\"cpu\",node=~\"$node\"})/ sum(kube_node_status_allocatable{node=~\"$node\",cluster=~\"$cluster\",resource=\"cpu\"})",
           "format": "time_series",
@@ -315,7 +315,7 @@
         "Value": 75
       },
       "datasource": {
-        "uid": "$datasource"
+        "uid": "${DS_PROMETHEUS}"
       },
       "gridPos": {
         "h": 4,
@@ -336,7 +336,7 @@
       "targets": [
         {
           "datasource": {
-            "uid": "$datasource"
+            "uid": "${DS_PROMETHEUS}"
           },
           "expr": "sum(kube_pod_container_resource_requests{cluster=~\"$cluster\",resource=\"memory\",node=~\"$node\"}) / sum(kube_node_status_allocatable{node=~\"$node\",cluster=~\"$cluster\",resource=\"memory\"})",
           "format": "time_series",
@@ -351,7 +351,7 @@
     {
       "datasource": {
         "type": "prometheus",
-        "uid": "$datasource"
+        "uid": "${DS_PROMETHEUS}"
       },
       "fieldConfig": {
         "defaults": {
@@ -432,7 +432,7 @@
       "targets": [
         {
           "datasource": {
-            "uid": "$datasource"
+            "uid": "${DS_PROMETHEUS}"
           },
           "editorMode": "code",
           "expr": "sum(kube_node_status_allocatable{cluster=~\"$cluster\",resource=\"pods\",node=~\"$node\"})",
@@ -444,7 +444,7 @@
         },
         {
           "datasource": {
-            "uid": "$datasource"
+            "uid": "${DS_PROMETHEUS}"
           },
           "expr": "sum(kube_pod_info{node=~\"$node\",cluster=~\"$cluster\"})",
           "format": "time_series",
@@ -459,7 +459,7 @@
     },
     {
       "datasource": {
-        "uid": "$datasource"
+        "uid": "${DS_PROMETHEUS}"
       },
       "fieldConfig": {
         "defaults": {
@@ -540,7 +540,7 @@
       "targets": [
         {
           "datasource": {
-            "uid": "$datasource"
+            "uid": "${DS_PROMETHEUS}"
           },
           "expr": "sum(kube_node_status_capacity{node=~\"$node\",cluster=~\"$cluster\",resource=\"cpu\"})",
           "format": "time_series",
@@ -550,7 +550,7 @@
         },
         {
           "datasource": {
-            "uid": "$datasource"
+            "uid": "${DS_PROMETHEUS}"
           },
           "expr": "sum(kube_node_status_allocatable{node=~\"$node\",cluster=~\"$cluster\",resource=\"cpu\"})",
           "format": "time_series",
@@ -560,7 +560,7 @@
         },
         {
           "datasource": {
-            "uid": "$datasource"
+            "uid": "${DS_PROMETHEUS}"
           },
           "expr": "sum(kube_pod_container_resource_requests{cluster=~\"$cluster\",resource=\"cpu\",node=~\"$node\"})",
           "format": "time_series",
@@ -570,7 +570,7 @@
         },
         {
           "datasource": {
-            "uid": "$datasource"
+            "uid": "${DS_PROMETHEUS}"
           },
           "expr": "sum(kube_pod_container_resource_limits{cluster=~\"$cluster\",resource=\"cpu\",node=~\"$node\"})",
           "format": "time_series",
@@ -585,7 +585,7 @@
     },
     {
       "datasource": {
-        "uid": "$datasource"
+        "uid": "${DS_PROMETHEUS}"
       },
       "fieldConfig": {
         "defaults": {
@@ -666,7 +666,7 @@
       "targets": [
         {
           "datasource": {
-            "uid": "$datasource"
+            "uid": "${DS_PROMETHEUS}"
           },
           "expr": "sum(kube_node_status_allocatable{node=~\"$node\",cluster=~\"$cluster\",resource=\"memory\"})",
           "format": "time_series",
@@ -676,7 +676,7 @@
         },
         {
           "datasource": {
-            "uid": "$datasource"
+            "uid": "${DS_PROMETHEUS}"
           },
           "expr": "sum(kube_node_status_capacity{node=~\"$node\",cluster=~\"$cluster\",resource=\"memory\"})",
           "format": "time_series",
@@ -686,7 +686,7 @@
         },
         {
           "datasource": {
-            "uid": "$datasource"
+            "uid": "${DS_PROMETHEUS}"
           },
           "expr": "sum(kube_pod_container_resource_requests{cluster=~\"$cluster\",resource=\"memory\",node=~\"$node\"})",
           "format": "time_series",
@@ -696,7 +696,7 @@
         },
         {
           "datasource": {
-            "uid": "$datasource"
+            "uid": "${DS_PROMETHEUS}"
           },
           "expr": "sum(kube_pod_container_resource_limits{cluster=~\"$cluster\",resource=\"memory\",node=~\"$node\"})",
           "format": "time_series",
@@ -725,7 +725,7 @@
       "panels": [
         {
           "datasource": {
-            "uid": "$datasource"
+            "uid": "${DS_PROMETHEUS}"
           },
           "fieldConfig": {
             "defaults": {
@@ -772,7 +772,7 @@
           "targets": [
             {
               "datasource": {
-                "uid": "$datasource"
+                "uid": "${DS_PROMETHEUS}"
               },
               "expr": "sum(kube_node_info{cluster=~\"$cluster\"})",
               "format": "time_series",
@@ -789,7 +789,7 @@
         },
         {
           "datasource": {
-            "uid": "$datasource"
+            "uid": "${DS_PROMETHEUS}"
           },
           "fieldConfig": {
             "defaults": {
@@ -854,7 +854,7 @@
           "targets": [
             {
               "datasource": {
-                "uid": "$datasource"
+                "uid": "${DS_PROMETHEUS}"
               },
               "expr": "sum(kube_node_spec_unschedulable{cluster=~\"$cluster\"})",
               "format": "time_series",
@@ -870,7 +870,7 @@
         },
         {
           "datasource": {
-            "uid": "$datasource"
+            "uid": "${DS_PROMETHEUS}"
           },
           "fieldConfig": {
             "defaults": {
@@ -950,7 +950,7 @@
           "targets": [
             {
               "datasource": {
-                "uid": "$datasource"
+                "uid": "${DS_PROMETHEUS}"
               },
               "expr": "kube_node_status_condition{cluster=~\"$cluster\",condition=\"Ready\",status=\"false\"}==1",
               "format": "time_series",
@@ -966,7 +966,7 @@
         },
         {
           "datasource": {
-            "uid": "$datasource"
+            "uid": "${DS_PROMETHEUS}"
           },
           "fieldConfig": {
             "defaults": {
@@ -1046,7 +1046,7 @@
           "targets": [
             {
               "datasource": {
-                "uid": "$datasource"
+                "uid": "${DS_PROMETHEUS}"
               },
               "expr": "kube_node_status_condition{condition=\"DiskPressure\",cluster=~\"$cluster\",status=\"true\"}==1",
               "format": "time_series",
@@ -1058,7 +1058,7 @@
             },
             {
               "datasource": {
-                "uid": "$datasource"
+                "uid": "${DS_PROMETHEUS}"
               },
               "expr": "kube_node_status_condition{condition=\"MemoryPressure\",node=~\"$node\",cluster=~\"$cluster\",status=\"true\"}==1",
               "format": "time_series",
@@ -1068,7 +1068,7 @@
             },
             {
               "datasource": {
-                "uid": "$datasource"
+                "uid": "${DS_PROMETHEUS}"
               },
               "expr": "kube_node_status_condition{condition=~\"PIDPressure\",node=~\"$node\",cluster=~\"$cluster\",status=\"true\"}==1",
               "format": "time_series",
@@ -1209,7 +1209,7 @@
       "panels": [
         {
           "datasource": {
-            "uid": "$datasource"
+            "uid": "${DS_PROMETHEUS}"
           },
           "fieldConfig": {
             "defaults": {
@@ -1366,7 +1366,7 @@
           "targets": [
             {
               "datasource": {
-                "uid": "$datasource"
+                "uid": "${DS_PROMETHEUS}"
               },
               "expr": "kube_deployment_status_replicas{namespace=~\"$namespace\",cluster=~\"$cluster\"}",
               "format": "time_series",
@@ -1391,7 +1391,7 @@
         },
         {
           "datasource": {
-            "uid": "$datasource"
+            "uid": "${DS_PROMETHEUS}"
           },
           "fieldConfig": {
             "defaults": {
@@ -1453,7 +1453,7 @@
           "targets": [
             {
               "datasource": {
-                "uid": "$datasource"
+                "uid": "${DS_PROMETHEUS}"
               },
               "expr": "sum(kube_deployment_status_replicas{namespace=~\"$namespace\",cluster=~\"$cluster\"})",
               "format": "time_series",
@@ -1467,7 +1467,7 @@
         },
         {
           "datasource": {
-            "uid": "$datasource"
+            "uid": "${DS_PROMETHEUS}"
           },
           "fieldConfig": {
             "defaults": {
@@ -1529,7 +1529,7 @@
           "targets": [
             {
               "datasource": {
-                "uid": "$datasource"
+                "uid": "${DS_PROMETHEUS}"
               },
               "expr": "sum(kube_deployment_status_replicas_updated{namespace=~\"$namespace\",cluster=~\"$cluster\"})",
               "format": "time_series",
@@ -1543,7 +1543,7 @@
         },
         {
           "datasource": {
-            "uid": "$datasource"
+            "uid": "${DS_PROMETHEUS}"
           },
           "fieldConfig": {
             "defaults": {
@@ -1605,7 +1605,7 @@
           "targets": [
             {
               "datasource": {
-                "uid": "$datasource"
+                "uid": "${DS_PROMETHEUS}"
               },
               "expr": "sum(kube_deployment_status_replicas_unavailable{namespace=~\"$namespace\",cluster=~\"$cluster\"})",
               "format": "time_series",
@@ -1646,7 +1646,7 @@
       "panels": [
         {
           "datasource": {
-            "uid": "$datasource"
+            "uid": "${DS_PROMETHEUS}"
           },
           "fieldConfig": {
             "defaults": {
@@ -1798,7 +1798,7 @@
           "targets": [
             {
               "datasource": {
-                "uid": "$datasource"
+                "uid": "${DS_PROMETHEUS}"
               },
               "expr": "kube_statefulset_status_replicas_ready{namespace=~\"$namespace\",cluster=~\"$cluster\"}",
               "format": "time_series",
@@ -1823,7 +1823,7 @@
         },
         {
           "datasource": {
-            "uid": "$datasource"
+            "uid": "${DS_PROMETHEUS}"
           },
           "fieldConfig": {
             "defaults": {
@@ -1902,7 +1902,7 @@
           "targets": [
             {
               "datasource": {
-                "uid": "$datasource"
+                "uid": "${DS_PROMETHEUS}"
               },
               "expr": "kube_statefulset_status_replicas_ready{namespace=~\"$namespace\",cluster=~\"$cluster\"}/kube_statefulset_status_replicas{namespace=~\"$namespace\",cluster=~\"$cluster\"}*100",
               "format": "time_series",
@@ -1945,7 +1945,7 @@
       "panels": [
         {
           "datasource": {
-            "uid": "$datasource"
+            "uid": "${DS_PROMETHEUS}"
           },
           "fieldConfig": {
             "defaults": {
@@ -2022,7 +2022,7 @@
           "targets": [
             {
               "datasource": {
-                "uid": "$datasource"
+                "uid": "${DS_PROMETHEUS}"
               },
               "expr": "changes(kube_pod_container_status_restarts_total{namespace=~\"$namespace\",cluster=~\"$cluster\"}[30m])>1",
               "format": "time_series",
@@ -2047,7 +2047,7 @@
         },
         {
           "datasource": {
-            "uid": "$datasource"
+            "uid": "${DS_PROMETHEUS}"
           },
           "fieldConfig": {
             "defaults": {
@@ -2127,7 +2127,7 @@
           "targets": [
             {
               "datasource": {
-                "uid": "$datasource"
+                "uid": "${DS_PROMETHEUS}"
               },
               "expr": "kube_pod_status_reason{cluster=~\"$cluster\",namespace=~\"$namespace\", reason=\"Evicted\"}==1",
               "format": "time_series",
@@ -2144,7 +2144,7 @@
         },
         {
           "datasource": {
-            "uid": "$datasource"
+            "uid": "${DS_PROMETHEUS}"
           },
           "fieldConfig": {
             "defaults": {
@@ -2207,7 +2207,7 @@
           "targets": [
             {
               "datasource": {
-                "uid": "$datasource"
+                "uid": "${DS_PROMETHEUS}"
               },
               "expr": "sum(kube_pod_status_phase{cluster=~\"$cluster\",namespace=~\"$namespace\", phase=\"Running\"})",
               "format": "time_series",
@@ -2222,7 +2222,7 @@
         },
         {
           "datasource": {
-            "uid": "$datasource"
+            "uid": "${DS_PROMETHEUS}"
           },
           "fieldConfig": {
             "defaults": {
@@ -2285,7 +2285,7 @@
           "targets": [
             {
               "datasource": {
-                "uid": "$datasource"
+                "uid": "${DS_PROMETHEUS}"
               },
               "expr": "sum(kube_pod_status_phase{cluster=~\"$cluster\",namespace=~\"$namespace\", phase=\"Succeeded\"})",
               "format": "time_series",
@@ -2300,7 +2300,7 @@
         },
         {
           "datasource": {
-            "uid": "$datasource"
+            "uid": "${DS_PROMETHEUS}"
           },
           "fieldConfig": {
             "defaults": {
@@ -2363,7 +2363,7 @@
           "targets": [
             {
               "datasource": {
-                "uid": "$datasource"
+                "uid": "${DS_PROMETHEUS}"
               },
               "expr": "sum(kube_pod_status_phase{cluster=~\"$cluster\",namespace=~\"$namespace\", phase=\"Failed\"})",
               "format": "time_series",
@@ -2378,7 +2378,7 @@
         },
         {
           "datasource": {
-            "uid": "$datasource"
+            "uid": "${DS_PROMETHEUS}"
           },
           "fieldConfig": {
             "defaults": {
@@ -2441,7 +2441,7 @@
           "targets": [
             {
               "datasource": {
-                "uid": "$datasource"
+                "uid": "${DS_PROMETHEUS}"
               },
               "expr": "sum(kube_pod_status_phase{cluster=~\"$cluster\",namespace=~\"$namespace\", phase=\"Pending\"})",
               "format": "time_series",
@@ -2456,7 +2456,7 @@
         },
         {
           "datasource": {
-            "uid": "$datasource"
+            "uid": "${DS_PROMETHEUS}"
           },
           "fieldConfig": {
             "defaults": {
@@ -2519,7 +2519,7 @@
           "targets": [
             {
               "datasource": {
-                "uid": "$datasource"
+                "uid": "${DS_PROMETHEUS}"
               },
               "expr": "sum(kube_pod_status_phase{cluster=~\"$cluster\",namespace=~\"$namespace\", phase=\"Unknown\"})",
               "format": "time_series",
@@ -2601,7 +2601,7 @@
             "Value": 75
           },
           "datasource": {
-            "uid": "$datasource"
+            "uid": "${DS_PROMETHEUS}"
           },
           "gridPos": {
             "h": 3,
@@ -2622,7 +2622,7 @@
           "targets": [
             {
               "datasource": {
-                "uid": "$datasource"
+                "uid": "${DS_PROMETHEUS}"
               },
               "expr": "sum(kube_pod_container_status_running{namespace=~\"$namespace\",cluster=~\"$cluster\"})",
               "format": "time_series",
@@ -2678,7 +2678,7 @@
             "Value": 75
           },
           "datasource": {
-            "uid": "$datasource"
+            "uid": "${DS_PROMETHEUS}"
           },
           "gridPos": {
             "h": 3,
@@ -2699,7 +2699,7 @@
           "targets": [
             {
               "datasource": {
-                "uid": "$datasource"
+                "uid": "${DS_PROMETHEUS}"
               },
               "expr": "sum(kube_pod_container_status_waiting{namespace=~\"$namespace\",cluster=~\"$cluster\"})",
               "format": "time_series",
@@ -2753,7 +2753,7 @@
             "Value": 75
           },
           "datasource": {
-            "uid": "$datasource"
+            "uid": "${DS_PROMETHEUS}"
           },
           "gridPos": {
             "h": 3,
@@ -2774,7 +2774,7 @@
           "targets": [
             {
               "datasource": {
-                "uid": "$datasource"
+                "uid": "${DS_PROMETHEUS}"
               },
               "expr": "sum(kube_pod_container_status_terminated{namespace=~\"$namespace\",cluster=~\"$cluster\"})",
               "format": "time_series",
@@ -2828,7 +2828,7 @@
             "Value": 75
           },
           "datasource": {
-            "uid": "$datasource"
+            "uid": "${DS_PROMETHEUS}"
           },
           "gridPos": {
             "h": 3,
@@ -2849,7 +2849,7 @@
           "targets": [
             {
               "datasource": {
-                "uid": "$datasource"
+                "uid": "${DS_PROMETHEUS}"
               },
               "expr": "sum(changes(kube_pod_container_status_restarts_total{namespace=~\"$namespace\",cluster=~\"$cluster\"}[30m]))",
               "format": "time_series",
@@ -2903,7 +2903,7 @@
             "Value": 75
           },
           "datasource": {
-            "uid": "$datasource"
+            "uid": "${DS_PROMETHEUS}"
           },
           "gridPos": {
             "h": 3,
@@ -2924,7 +2924,7 @@
           "targets": [
             {
               "datasource": {
-                "uid": "$datasource"
+                "uid": "${DS_PROMETHEUS}"
               },
               "expr": "sum(kube_pod_container_resource_requests_cpu_cores{namespace=~\"$namespace\",cluster=~\"$cluster\"})",
               "format": "time_series",
@@ -2978,7 +2978,7 @@
             "Value": 75
           },
           "datasource": {
-            "uid": "$datasource"
+            "uid": "${DS_PROMETHEUS}"
           },
           "gridPos": {
             "h": 3,
@@ -2999,7 +2999,7 @@
           "targets": [
             {
               "datasource": {
-                "uid": "$datasource"
+                "uid": "${DS_PROMETHEUS}"
               },
               "expr": "sum(kube_pod_container_resource_requests_memory_bytes{namespace=~\"$namespace\" ,cluster=~\"$cluster\"})",
               "format": "time_series",
@@ -3474,7 +3474,7 @@
       "panels": [
         {
           "datasource": {
-            "uid": "$datasource"
+            "uid": "${DS_PROMETHEUS}"
           },
           "fieldConfig": {
             "defaults": {
@@ -3537,7 +3537,7 @@
           "targets": [
             {
               "datasource": {
-                "uid": "$datasource"
+                "uid": "${DS_PROMETHEUS}"
               },
               "expr": "sum(kube_job_status_succeeded{namespace=~\"$namespace\",cluster=~\"$cluster\"})",
               "format": "time_series",
@@ -3551,7 +3551,7 @@
         },
         {
           "datasource": {
-            "uid": "$datasource"
+            "uid": "${DS_PROMETHEUS}"
           },
           "description": "",
           "fieldConfig": {
@@ -3670,7 +3670,7 @@
           "targets": [
             {
               "datasource": {
-                "uid": "$datasource"
+                "uid": "${DS_PROMETHEUS}"
               },
               "expr": "(time()-kube_job_status_completion_time{namespace=~\"$namespace\",cluster=~\"$cluster\"})/60/60/24>1",
               "format": "time_series",
@@ -3695,7 +3695,7 @@
         },
         {
           "datasource": {
-            "uid": "$datasource"
+            "uid": "${DS_PROMETHEUS}"
           },
           "description": "",
           "fieldConfig": {
@@ -3810,7 +3810,7 @@
           "targets": [
             {
               "datasource": {
-                "uid": "$datasource"
+                "uid": "${DS_PROMETHEUS}"
               },
               "expr": "kube_job_status_failed{namespace=~\"$namespace\",cluster=~\"$cluster\"}>1",
               "format": "time_series",
@@ -3835,7 +3835,7 @@
         },
         {
           "datasource": {
-            "uid": "$datasource"
+            "uid": "${DS_PROMETHEUS}"
           },
           "fieldConfig": {
             "defaults": {
@@ -3898,7 +3898,7 @@
           "targets": [
             {
               "datasource": {
-                "uid": "$datasource"
+                "uid": "${DS_PROMETHEUS}"
               },
               "expr": "sum(kube_job_status_active{namespace=~\"$namespace\",cluster=~\"$cluster\"})",
               "format": "time_series",
@@ -3912,7 +3912,7 @@
         },
         {
           "datasource": {
-            "uid": "$datasource"
+            "uid": "${DS_PROMETHEUS}"
           },
           "fieldConfig": {
             "defaults": {
@@ -3975,7 +3975,7 @@
           "targets": [
             {
               "datasource": {
-                "uid": "$datasource"
+                "uid": "${DS_PROMETHEUS}"
               },
               "expr": "sum(kube_job_status_failed{namespace=~\"$namespace\",cluster=~\"$cluster\"})",
               "format": "time_series",
@@ -4055,7 +4055,7 @@
             "Value": 75
           },
           "datasource": {
-            "uid": "$datasource"
+            "uid": "${DS_PROMETHEUS}"
           },
           "gridPos": {
             "h": 8,
@@ -4076,7 +4076,7 @@
           "targets": [
             {
               "datasource": {
-                "uid": "$datasource"
+                "uid": "${DS_PROMETHEUS}"
               },
               "expr": "sum(kube_persistentvolumeclaim_status_phase{phase=\"Bound\"}==1)",
               "format": "time_series",
@@ -4130,7 +4130,7 @@
             "Value": 75
           },
           "datasource": {
-            "uid": "$datasource"
+            "uid": "${DS_PROMETHEUS}"
           },
           "gridPos": {
             "h": 8,
@@ -4151,7 +4151,7 @@
           "targets": [
             {
               "datasource": {
-                "uid": "$datasource"
+                "uid": "${DS_PROMETHEUS}"
               },
               "expr": "sum(kube_persistentvolumeclaim_status_phase{phase!=\"Bound\"}==1)",
               "format": "time_series",
@@ -4166,7 +4166,7 @@
         },
         {
           "datasource": {
-            "uid": "$datasource"
+            "uid": "${DS_PROMETHEUS}"
           },
           "fieldConfig": {
             "defaults": {
@@ -4239,7 +4239,7 @@
           "targets": [
             {
               "datasource": {
-                "uid": "$datasource"
+                "uid": "${DS_PROMETHEUS}"
               },
               "expr": "kube_persistentvolumeclaim_resource_requests_storage_bytes/1024/1024/1024",
               "format": "time_series",
@@ -4288,7 +4288,7 @@
         "current": {},
         "datasource": {
           "type": "prometheus",
-          "uid": "$datasource"
+          "uid": "${DS_PROMETHEUS}"
         },
         "definition": "label_values(kube_node_info, cluster)",
         "hide": 0,
@@ -4313,7 +4313,7 @@
         "current": {},
         "datasource": {
           "type": "prometheus",
-          "uid": "$datasource"
+          "uid": "${DS_PROMETHEUS}"
         },
         "definition": "label_values(kube_node_info{cluster=~\"$cluster\"}, node)",
         "hide": 0,
@@ -4339,7 +4339,7 @@
         "current": {},
         "datasource": {
           "type": "prometheus",
-          "uid": "$datasource"
+          "uid": "${DS_PROMETHEUS}"
         },
         "definition": "",
         "hide": 0,
