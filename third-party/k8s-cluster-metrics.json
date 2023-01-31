@@ -9,7 +9,7 @@
       "pluginName": "Prometheus"
     },
     {
-      "name": "VAR_DATASOURCE",
+      "name": "datasource",
       "type": "constant",
       "label": "datasource",
       "value": "Prometheus",
